@@ -12,7 +12,10 @@ import java.util.*;
 public class Assignment8 {
 	public static void main(String[] args) {
 		User user = new User("abhi","1234","abhi@gmail.com");
-		user.signUp();
+		
+		Accounts accounts = new Accounts();
+		
+		accounts.signUp(user);
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -25,7 +28,7 @@ public class Assignment8 {
 				throw new Exception("Provide all the credentials (Incomplete credentials provided)");
 			}
 			else {
-				user.login(credentials[0],credentials[1],credentials[2]);
+				accounts.login(credentials[0],credentials[1],credentials[2]);
 			}
 		}
 		catch(Exception e) {
